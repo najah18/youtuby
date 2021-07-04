@@ -1,0 +1,431 @@
+ <!DOCTYPE HTML>
+ <html lang="en">
+ <head>
+ <meta charset="utf 8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>youtuby channel</title>
+ <link rel="stylesheet" href="css/bootstrap-rtl.css">
+ 
+ </head >
+ <body class="mt-5 rtl">
+ <div id="top-menu"> 
+<div class="container-fluid"> 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rtl">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><b>يوتيوبي</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link active rtl" aria-current="page" href="index.html">الفيديوهات المقترحة </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-lg-3 rtl" href="#">المرفوعة حديثا</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link rtl" href="#" tabindex="-1" >الفيديوهات الرائجة</a>
+        </li>     
+		<li class="nav-item">
+          <a class="nav-link btn btn-info text-white d-inline-block " href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button onclick="location.href='search.html';" class="btn btn-outline-danger ml-auto " type="submit">ابحث</button>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+ 
+
+<!-- Modal -->
+<div class="modal fade rtl" id="loginModal" tabindex="-1" >
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" >
+		<span>&times;</span>
+		</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="col-form-label"> البريد الالكتروني </label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+           <label for="password" class="col-form-label"> كلمة المرور</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+	  <a href="#" >نسيت كلمة المرور</a>
+	  <a href="#" class="mx-auto">انشاء حساب</a>
+        <button type="button" class="btn btn-primary">دخول</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="channel-page">
+<div class="container-fluid">
+<div class="row">
+<div class="banner position-relative">
+<img class="img-fluid" src="img/h-channel.jpg" alt="">
+<div class="social-media position-absolute bg-secondary p-1" style="bottom: 18px; left:18px">
+<a href="#" title="اكادمية حسوب" class="mr-1">
+<img src="img/icons/hsoub.png">
+اكادمية حسوب
+</a>
+
+<a href="#" title=" تابعنا على تويتر" class="mr-1">
+<img src="img/icons/twitter.png">
+
+</a>
+
+<a href="#" title="تابعنا على فيس بوك" class="mr-1">
+<img src="img/icons/facebook.png">
+
+</a>
+
+<a href="#" title="شركة حسوب">
+<img src="img/icons/hsoub-web.png">
+
+</a>
+
+</div>
+
+ <div  class="follwo position-absolute " style="bottom: 18px; right:18px"> 
+ <button class="btn btn-info">  اشتراك 5439</button> 
+ </div> 
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+ <div class="row">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto w-100 rtl">
+  <div class="container-fluid">
+    
+   
+      <ul class="navbar-nav mx-auto d-block">
+        <li class="nav-item mr-3">
+          <a class="nav-link active rtl" aria-current="page" href="#">الصفحة الرئيسية </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-lg-3 rtl" href="#">فيديوهاتي</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link rtl" href="#" tabindex="-1" >قوائم التشغيل </a>
+        </li>   
+
+<li class="nav-item">
+          <a class="nav-link rtl" href="#" tabindex="-1" >القنوات</a>
+        </li>   
+
+<li class="nav-item">
+          <a class="nav-link rtl" href="#" tabindex="-1" >مناقشة </a>
+        </li>   	
+
+<li class="nav-item">
+          <a class="nav-link rtl" href="#" tabindex="-1" >حول</a>
+        </li>   		
+		
+      </ul>
+      
+   
+  </div>
+</nav>
+</div>
+
+ <div class="video-section bg-white p-2 mt-3 ">
+ <div class="card border-0">
+      <div class="row">
+        <div class="col-sm-6">
+         <video src="video/hsoub.mp4" controls poster="img/poster.png"  autoplay class="w-100">
+		  <track kind="captions" src="video/caption.vtt" srclang="ar" label="عربي" default>
+		 لا يدعم العنصر فيديو <code>video</code>
+		 </video>
+        </div>
+        <div class="col-sm-6">
+          <div class="card-block">
+		  <a href="watch.html">
+            <h3 class="card-title">هنا سيكون عنوان الفيديو</h3> </a>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+						<small class="text-muted"
+	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </small> 
+	  
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+ </div>
+ <div class="latest-download">
+ <div class="container">
+ <div class="row rtl">
+<div class="content m-4">
+<h4 class="my-5 ml-5"> اخر الفيديوهات المرفوعة</h4>
+</div></div>
+ 
+ <div class="row">
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <small class="text-muted">
+	 <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </small></span>
+	  </div>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ 
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+ 
+ 
+ <div class="col-sm-6 col-md-4 col-lg-3">
+ <div class="card mb-3">
+    <a href="watch.html"><img src="img/thumbnail/restful.jpg" class="card-img-top" alt="card-img">
+    <div class="card-body p-0">
+      <p class="card-title">تعلم كيف تبني واجهات مستخدم شرح فلسفة restful</p>
+      <p class="card-text"></p>
+	  </a>
+	  <div class="card footer">
+	  <span class="d-block"><i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </div></span>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+    </div>
+ 
+ 
+ </div>
+ 
+  
+ </div>
+  </div>
+ </div>
+ </div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script src="https://kit.fontawesome.com/565d7bf9f9.js" crossorigin="anonymous"></script>
+ <script src="js/jquery-3.5.1.slim.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.js"></script>
+ 
+ </body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </html>
