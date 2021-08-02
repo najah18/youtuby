@@ -5,41 +5,54 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>youtuby</title>
  <link rel="stylesheet" href="css/bootstrap-rtl.css">
+ <link rel="stylesheet" href="css/index.css">
+ <link rel="stylesheet" href="css/watch.css">
  
  </head >
  <body class="mt-5 rtl">
  <div id="top-menu"> 
 <div class="container-fluid"> 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rtl">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rtl py-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html"><b>يوتيوبي</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- icon القائمة الجانبية-->
+  <i class="fas fa-bars fa-lg" id="toggler"></i>
+  <!--نهاية القائمة الجانبية-->
+  <b>  <a class="navbar-brand" href="index.html">
+	
+	يوتيوبي
+		<span class="video-icon"><i class="fas fa-play-circle"></i></span>
+
+	</a></b>
+	
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-lg-auto">
-        <li class="nav-item">
-          <a class="nav-link active rtl" aria-current="page" href="index.html">الفيديوهات المقترحة </a>
+        <li class="nav-item active">
+          <a class="nav-link px-3 ml-1 mr-3 rtl" aria-current="page" href="index.html">الفيديوهات المقترحة </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ml-lg-3 rtl" href="#">المرفوعة حديثا</a>
+          <a class="nav-link ml-3 px-3 ml-1 rtl" href="#">المرفوعة حديثا</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link rtl" href="#" tabindex="-1" >الفيديوهات الرائجة</a>
+          <a class="nav-link rtl px-3 ml-1" href="#" tabindex="-1" >الفيديوهات الرائجة</a>
         </li>     
-		<li class="nav-item">
-          <a class="nav-link btn btn-info text-white d-inline-block " href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
-        </li>
+		
       </ul>
-      <div class="d-flex">
+      <div class="form-inline my-2 my-lg-0">
         <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
         <button onclick="location.href='search.html';" class="btn btn-outline-danger ml-auto " type="submit">ابحث</button>
       </div>
+
     </div>
+	<i class="fas fa-search mr-4 search-icon"></i>
+		            <a class="nav-link login  " href="#" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
+
   </div>
 </nav>
+
+<input type="search" class="form-control search-input" placeholder="ابحث عن....">
  
  
 
@@ -73,17 +86,78 @@
     </div>
   </div>
 </div>
+<!--القائمة الجانبية-->
+ 
+ <div class="row pt-4">
+ <div id="wrap">
+	<div class="sidebar">
+		<ul class="list-group list-group-flush pl-0">
+		<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-home mr-2 purple"></i>الصفحة الرئيسية
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fab fa-algolia mr-2 purple"></i>الفيديوهات المقترحة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="far fa-plus-aquare mr-2 purple"></i>المرفوعة حديثا
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-fire-alt mr-2 purple"></i>الفيديوهات الرائجة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-fire-alt mr-2 purple"></i>فيديوهاتي 
+			</a>
+			
+			<a href="log.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-history mr-2 purple"></i>سجل المشاهدة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="far fa-share-square mr-2 purple"></i>الاشتراكات
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-film mr-2 purple"></i>الافلام والعروض
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-gamepad mr-2 purple"></i>العاب الفيديو
+			</a>
+			
+			
+		
+		
+		
+		
+		</ul>
+	
+	</div>
+ 
+ 
+ 
+ 
+ </div>
+ 
+ </div>
+ 
+ 
+ 
+  <!--نهاية القائمة الجانبية-->
 
  
 
-
-
-
+ 
+ 
+ 
 
 <div class="watch-page pt-5">
  <div class="container-fluid">
  <div class="card border-0">
-      <div class="row">
+      <div class="row px-2">
         <div class="col-lg-7">
          <video src="video/hsoub.mp4" controls poster="img/poster.png"  class="w-100">
 		  <track kind="captions" src="video/caption.vtt" srclang="ar" label="عربي" default>
@@ -93,7 +167,7 @@
         <div class="col-lg-5">
           <div class="card-block">
 		 
-		  <small class="text-muted"
+		  <small class="text-muted">
 	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
 	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
 	  </small> 
@@ -103,8 +177,12 @@
 	  </a>
 	   <a href="watch.html">
             <h3 class="card-title">هنا سيكون عنوان الفيديو</h3> </a>
-                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص 
 						
+						<span id="dots">......</span><span id="more">الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو هنا سيكون النص الخاص بشرح الفيديو 
+</span>
+						</p>
+						<button class="btn mb-4" id="myBtn">عرض المزيد .. </button>
 	  
           </div>
 		  <div class="watch-icons mt-4">
@@ -165,7 +243,7 @@
         	       <div class="clearfix"></div>
 				   <p>هذا الفيديو اكثر من رائع</p>
         	        <p>
-        	            <a class="float-right text-white btn btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> رد</a>
+        	            <a class="float-right text-white btn btn-info mr-2 mt-4 reply"> <i class="fa fa-reply"></i> رد</a>
         	            <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجاب</a>
         	       </p>
         	    </div>
@@ -211,56 +289,10 @@
         	       <div class="clearfix"></div>
 				   <p>هذا الفيديو اكثر من رائع</p>
         	        <p>
-        	            <a class="float-right text-white btn btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> رد</a>
-        	            <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجاب</a>
-        	       </p>
-        	    </div>
-	        </div>
-	        	<div class="card card-inner ml-5 mt-3">
-            	    <div class="card-body">
-            	        <div class="row">
-                    	    <span class="col-2">
-                    	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
-                    	        <p class="text-secondary text-center  reply-time">منذ 20 دقيقة</p>
-                    	    </span>
-                    	    <div class="col-10 mt-3 mt-md-4">
-                    	        <p><a href="#"><strong>اكادمية حسوب</strong></a></p>
-                    	        <p> اهلا احمد شكرا لتعليقك الجميل </p>
-                    	        <p>
-                    	           
-                    	            <a class="float-right btn text-white btn-info mt-4 "> <i class="fa fa-heart"></i> اعجاب</a>
-                    	       </p>
-                    	    </div>
-            	        </div>
-            	    </div>
-	            </div>
-	    </div>
-	</div>
-	
-	
-	
-	<div class="card mb-3">
-	    <div class="card-body ">
-	        <div class="row">
-        	    <div class="col-2">
-        	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-        	        <p class="text-secondary text-center">منذ 40 دقيقة</p>
-        	    </div>
-        	    <div class="col-10">
-        	        <p>
-        	            <a  href="#" class="float-right mt-3 mt-md-4" ><strong>احمد الاحمد</strong></a>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
-						<span class="float-left"><i class="text-warning fa fa-star"></i></span>
-
-        	       </p>
-        	       <div class="clearfix"></div>
-				   <p>هذا الفيديو اكثر من رائع</p>
-        	        <p>
-        	            <a class="float-right text-white btn btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> رد</a>
-        	            <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجاب</a>
+        	            <a class="float-right text-white btn btn-info mr-2 mt-4 reply"> 
+						<i class="fa fa-reply"></i> رد</a>
+        	            <a class="float-right btn text-white btn-info mt-4">
+						<i class="fa fa-heart"></i> اعجاب</a>
         	       </p>
         	    </div>
 	        </div>
@@ -307,7 +339,55 @@
         	       <div class="clearfix"></div>
 				   <p>هذا الفيديو اكثر من رائع</p>
         	        <p>
-        	            <a class="float-right text-white btn btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> رد</a>
+        	            <a class="float-right text-white btn btn-info mr-2 mt-4 reply"> <i class="fa fa-reply"></i> رد</a>
+        	            <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجاب</a>
+        	       </p>
+        	    </div>
+	        </div>
+	        	<div class="card card-inner ml-5 mt-3">
+            	    <div class="card-body">
+            	        <div class="row">
+                    	    <span class="col-2">
+                    	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
+                    	        <p class="text-secondary text-center  reply-time">منذ 20 دقيقة</p>
+                    	    </span>
+                    	    <div class="col-10 mt-3 mt-md-4">
+                    	        <p><a href="#"><strong>اكادمية حسوب</strong></a></p>
+                    	        <p> اهلا احمد شكرا لتعليقك الجميل </p>
+                    	        <p>
+                    	           
+                    	            <a class="float-right btn text-white btn-info mt-4 "> <i class="fa fa-heart"></i> اعجاب</a>
+                    	       </p>
+                    	    </div>
+            	        </div>
+            	    </div>
+	            </div>
+	    </div>
+	</div>
+	
+	
+	
+	<div class="card mb-3">
+	    <div class="card-body ">
+	        <div class="row">
+        	    <div class="col-2">
+        	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+        	        <p class="text-secondary text-center">منذ 40 دقيقة</p>
+        	    </div>
+        	    <div class="col-10">
+        	        <p>
+        	            <a  href="#" class="float-right mt-3 mt-md-4" ><strong>احمد الاحمد</strong></a>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-left"><i class="text-warning fa fa-star"></i></span>
+						<span class="float-left"><i class="text-warning fa fa-star"></i></span>
+
+        	       </p>
+        	       <div class="clearfix"></div>
+				   <p>هذا الفيديو اكثر من رائع</p>
+        	        <p>
+        	            <a class="float-right text-white btn btn-info mr-2 mt-4 reply"> <i class="fa fa-reply"></i> رد</a>
         	            <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجاب</a>
         	       </p>
         	    </div>
@@ -344,7 +424,9 @@
   <div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -370,7 +452,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -397,7 +481,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -424,7 +510,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -451,7 +539,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -478,7 +568,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -505,7 +597,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -532,7 +626,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -559,7 +655,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -586,7 +684,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -613,7 +713,9 @@
 	<div class="card p-2 mb-4">
       <div class="row">
         <div class="col-sm-5">
-         <img src="img/thumbnail/app.jpg" class="w-100" alt="">
+         <img src="img/thumbnail/app.jpg" class="w-100 h-100" alt="">
+		 <time>7:42</time>
+						<i class="fas fa-play fa-2x"></i>
         </div>
         <div class="col-sm-7">
           <div class="card-block">
@@ -675,6 +777,9 @@
  <script src="js/jquery-3.5.1.slim.min.js"></script>
  <script src="js/popper.min.js"></script>
  <script src="js/bootstrap.js"></script>
+ <script src="js/index.js"></script>
+ <script src="js/watch.js"></script>
+ 
  
  </body>
  

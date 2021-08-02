@@ -5,41 +5,54 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>نتائج البحث</title>
  <link rel="stylesheet" href="css/bootstrap-rtl.css">
+ <link rel="stylesheet" href="css/index.css">
+ <link rel="stylesheet" href="css/search.css">
  
  </head >
  <body class="mt-5 rtl">
  <div id="top-menu"> 
 <div class="container-fluid"> 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rtl">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rtl py-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html"><b>يوتيوبي</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- icon القائمة الجانبية-->
+  <i class="fas fa-bars fa-lg" id="toggler"></i>
+  <!--نهاية القائمة الجانبية-->
+  <b>  <a class="navbar-brand" href="index.html">
+	
+	يوتيوبي
+		<span class="video-icon"><i class="fas fa-play-circle"></i></span>
+
+	</a></b>
+	
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-lg-auto">
-        <li class="nav-item">
-          <a class="nav-link active rtl" aria-current="page" href="index.html">الفيديوهات المقترحة </a>
+        <li class="nav-item active">
+          <a class="nav-link px-3 ml-1 mr-3 rtl" aria-current="page" href="index.html">الفيديوهات المقترحة </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ml-lg-3 rtl" href="#">المرفوعة حديثا</a>
+          <a class="nav-link ml-3 px-3 ml-1 rtl" href="#">المرفوعة حديثا</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link rtl" href="#" tabindex="-1" >الفيديوهات الرائجة</a>
+          <a class="nav-link rtl px-3 ml-1" href="#" tabindex="-1" >الفيديوهات الرائجة</a>
         </li>     
-		<li class="nav-item">
-          <a class="nav-link btn btn-info text-white d-inline-block " href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
-        </li>
+		
       </ul>
-      <div class="d-flex">
+      <div class="form-inline my-2 my-lg-0">
         <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
         <button onclick="location.href='search.html';" class="btn btn-outline-danger ml-auto " type="submit">ابحث</button>
       </div>
+
     </div>
+	<i class="fas fa-search mr-4 search-icon"></i>
+		            <a class="nav-link login  " href="#" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
+
   </div>
 </nav>
+
+<input type="search" class="form-control search-input" placeholder="ابحث عن....">
  
  
 
@@ -73,22 +86,73 @@
     </div>
   </div>
 </div>
-
+<!--القائمة الجانبية-->
+ 
+ <div class="row pt-4">
+ <div id="wrap">
+	<div class="sidebar">
+		<ul class="list-group list-group-flush pl-0">
+		<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-home mr-2 purple"></i>الصفحة الرئيسية
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fab fa-algolia mr-2 purple"></i>الفيديوهات المقترحة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="far fa-plus-aquare mr-2 purple"></i>المرفوعة حديثا
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-fire-alt mr-2 purple"></i>الفيديوهات الرائجة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-fire-alt mr-2 purple"></i>فيديوهاتي 
+			</a>
+			
+			<a href="log.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-history mr-2 purple"></i>سجل المشاهدة
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="far fa-share-square mr-2 purple"></i>الاشتراكات
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-film mr-2 purple"></i>الافلام والعروض
+			</a>
+			
+			<a href="index.html" class="list-group-item list-group-item-action">	
+		<i class="fas fa-gamepad mr-2 purple"></i>العاب الفيديو
+			</a>
+			
+			
+		
+		
+		
+		
+		</ul>
+	
+	</div>
  
  
  
  
-
- 
- 
- 
- 
- 
- 
- 
-
-  </div>
  </div>
+ 
+ </div>
+ 
+ 
+ 
+  <!--نهاية القائمة الجانبية-->
+
+ 
+
+ 
+ 
+ 
  
  <div class="search-header pt-5">
  <div class="container ">
@@ -97,13 +161,13 @@
  حوالي 800 نتيجة 
  </div>
  <div class="col-6 ">
-<span class="float-left"><i class="fas fa-filter "></i>التصفية </span>
+<span class="float-left" id="search-filter-icon"><i class="fas fa-filter "></i>التصفية </span>
 </div> 
 
  </div>
 
 <div class="row mt-3">
-<div class="col-md-6 col-lg-3">
+<div class="col-md-6 col-lg-3 filter-column">
 							<div class="text-center">تاريخ التحميل</div>
 <hr>
     <label class="d-block mb-3">
@@ -138,7 +202,7 @@
 </label>
 
 </div>
-<div class="col-md-6  col-lg-3">
+<div class="col-md-6  col-lg-3 filter-column">
 										       <div class="text-center">النوع </div>
 <hr>
 
@@ -175,7 +239,7 @@
 </div>
 
 
-<div class="col-md-6  col-lg-3">
+<div class="col-md-6  col-lg-3 filter-column">
 											<div class="text-center">التصنيف بحسب </div>
 <hr>
  <label class="d-block mb-3">
@@ -208,7 +272,7 @@
 </div>
 
 
-<div class="col-md-6  col-lg-3">
+<div class="col-md-6  col-lg-3 filter-column">
 										<div class="text-center">المدة</div>
 <hr>
  <label class="d-block mb-3">
@@ -246,14 +310,15 @@
         <div class="col-12 my-3">
             <div class="card">
                 <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
+                    <div class=" card-icons">
 					<a href="watch.html">
-                        <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap"> 
-						
+                        <img class="card-top-image" src="img/thumbnail/devtools.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
                     </div>
                     <div class="card-body p-2">
                         <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
-                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو  هنا سيكون النص الخاص بشرح الفيديو  هنا سيكون النص الخاص بشرح الفيديو  هنا سيكون النص الخاص بشرح الفيديو </p>
 						<small class="text-muted"
 	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
 	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
@@ -278,75 +343,11 @@
         <div class="col-12 my-3">
             <div class="card">
                 <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
+                    <div class=" card-icons">
 					<a href="watch.html">
-                        <img class="" src="img/thumbnail/ruby.jpg" alt="Card image cap"> 
-						
-                    </div>
-                    <div class="card-body p-2">
-                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
-                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
-						<small class="text-muted"
-	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
-	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
-	  </small> 
-	  </a>
-	  <a href="channel.html" class="channel-img">
-	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
-	  <span class="card-text"> اكادمية حسوب</span>
-	  </a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-	
-	
-	
-	
-	
-	
-	 <div class="row">
-        <div class="col-12 my-3">
-            <div class="card">
-                <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
-					<a href="watch.html">
-                        <img class="" src="img/thumbnail/frontend.jpg" alt="Card image cap"> 
-						
-                    </div>
-                    <div class="card-body p-2">
-                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
-                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
-						<small class="text-muted"
-	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
-	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
-	  </small> 
-	  </a>
-	  <a href="channel.html" class="channel-img">
-	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
-	  <span class="card-text"> اكادمية حسوب</span>
-	  </a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-	
-	
-	
-	
-	
-	 <div class="row">
-        <div class="col-12 my-3">
-            <div class="card">
-                <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
-					<a href="watch.html">
-                        <img class="" src="img/thumbnail/database.jpg" alt="Card image cap"> 
-						
+                        <img class="card-top-image" src="img/thumbnail/ruby.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
                     </div>
                     <div class="card-body p-2">
                         <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
@@ -376,10 +377,44 @@
         <div class="col-12 my-3">
             <div class="card">
                 <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
+                    <div class="card-icons">
 					<a href="watch.html">
-                        <img class="" src="img/thumbnail/mostaql1.jpg" alt="Card image cap"> 
-						
+                        <img class="card-top-image" src="img/thumbnail/frontend.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+						<small class="text-muted"
+	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </small> 
+	  </a>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	 <div class="row">
+        <div class="col-12 my-3">
+            <div class="card">
+                <div class="card-horizontal d-md-flex d-block">
+                    <div class=" card-icons">
+					<a href="watch.html">
+                        <img class="card-top-image" src="img/thumbnail/database.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
                     </div>
                     <div class="card-body p-2">
                         <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
@@ -405,50 +440,16 @@
 	
 	
 	
-	
 	 <div class="row">
         <div class="col-12 my-3">
             <div class="card">
                 <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
+                    <div class=" card-icons">
 					<a href="watch.html">
-                        <img class="" src="img/thumbnail/ruby1" alt="Card image cap"> 
-						
-                    </div>
-                    <div class="card-body p-2">
-                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
-                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
-						<small class="text-muted"
-	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
-	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
-	  </small> 
-	  </a>
-	  <a href="channel.html" class="channel-img">
-	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
-	  <span class="card-text"> اكادمية حسوب</span>
-	  </a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	 <div class="row">
-        <div class="col-12 my-3">
-            <div class="card">
-                <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
-					<a href="watch.html">
-                        <img class="" src="img/thumbnail/app.jpg" alt="Card image cap"> 
-						
+                        <img class="card-top-image
+						" src="img/thumbnail/mostaql1.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
                     </div>
                     <div class="card-body p-2">
                         <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
@@ -479,10 +480,82 @@
         <div class="col-12 my-3">
             <div class="card">
                 <div class="card-horizontal d-md-flex d-block">
-                    <div class="img-square-wrapper">
+                    <div class=" card-icons">
 					<a href="watch.html">
-                        <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap"> 
-						
+                        <img class="card-top-image" src="img/thumbnail/ruby1" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+						<small class="text-muted"
+	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </small> 
+	  </a>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	 <div class="row">
+        <div class="col-12 my-3">
+            <div class="card icons">
+                <div class="card-horizontal d-md-flex d-block">
+                    <div class=" card-icons">
+					<a href="watch.html">
+                        <img class="card-top-image" src="img/thumbnail/app.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
+                    </div>
+                    <div class="card-body p-2">
+                        <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
+                        <p class="card-text">هنا سيكون النص الخاص بشرح الفيديو </p>
+						<small class="text-muted"
+	  <i class="fas fa-film"></i><span>3 الاف مشاهدة</span>
+	  <i class="far fa-clock"></i><span> قبل 9 اشهر </span>
+	  </small> 
+	  </a>
+	  <a href="channel.html" class="channel-img">
+	  <img src="img/ch-logo.png" alt="channel-img" class="rounded-circle my-3 ml-3" width="30px" my-10>
+	  <span class="card-text"> اكادمية حسوب</span>
+	  </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	 <div class="row">
+        <div class="col-12 my-3">
+            <div class="card">
+                <div class="card-horizontal d-md-flex d-block">
+                    <div class="card-icons">
+					<a href="watch.html">
+                        <img class="card-top-image" src="img/thumbnail/devtools.jpg" alt="Card image cap"> 
+						<time>21:42</time>
+						<i class="fas fa-play fa-2x"></i>
                     </div>
                     <div class="card-body p-2">
                         <h3 class="card-title">هنا سيكون عنوان الفيديو</h3>
@@ -522,9 +595,14 @@
  
  
  <script src="https://kit.fontawesome.com/565d7bf9f9.js" crossorigin="anonymous"></script>
- <script src="js/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+ 
  <script src="js/popper.min.js"></script>
  <script src="js/bootstrap.js"></script>
+ <script src="js/index.js"></script>
+ <script src="js/search.js"></script>
+ 
  
  </body>
  
